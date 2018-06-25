@@ -8,12 +8,19 @@ const
     app.use(ejsLayouts)
     
     app.get('/', (req, res) => {
-        res.render('home', { title: "BOOM!" })
+        res.render('home')
     })
     
-    app.get('/flavors', (req, res) => {
-        var flavors = ["mint", "strawberry", "chocolate"]
-        res.render('flavors', { flavors: flavors })
+    app.get('/about', (req, res) => {
+        res.render('about')
+    })
+
+    app.get('/contact', (req, res) => {
+        res.render('contact')
+    })
+
+    app.get('/skills', (req, res) => {
+        res.render('skills')
     })
 
     app.listen(PORT, (err) => {
